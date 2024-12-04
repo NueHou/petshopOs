@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="css/client-form.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Cliente</h1>
+    </header>
+    <main>
+        <form id="clientForm">
+            <input type="hidden" id="clientId">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="personType">Tipo:</label>
+            <select id="personType">
+                <option value="CLIENT">Client</option>
+                <option value="EPLOYEE">Employee</option>
+            </select>
+            
+            <label for="animal">Animal:</label>
+            <input type="animal" id="animal" required>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </main>
+    <script src="js/client-form.js"></script>
+</body>
+</html>
