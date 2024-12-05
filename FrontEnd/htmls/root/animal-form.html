@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Animais</title>
+    <link rel="stylesheet" href="css/client-form.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Animais</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="animal.html">Animais</a>
+            <a href="clients.html">Clients</a>
+            <button id="logoutButton">Sair</button>
+            </nav>
+    </header>
+    <main>
+        <form id="animalForm">
+            <input type="hidden" id="animalId">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+
+            <label for="type">Tipo:</label>
+            <input type="text" id="type" required>
+
+            <label for="race">Raça:</label>
+            <input type="text" id="race" required>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </main>
+    <script src="js/animal-form.js"></script>
+</body>
+</html>

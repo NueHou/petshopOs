@@ -17,21 +17,20 @@ async function fetchClients() {
             },
         });
 
-        if (!response.ok) throw new Error('Erro ao carregar clientes.');
-        const clients = await response.json();
+        if (!response.ok) throw new Error('Erro ao carregar animais.');
+        const client = await response.json();
 
-        clientList.innerHTML = clients
+        clientsList.innerHTML = client
             .map(
                 client => `
                     <tr>
-                        <td>${client.id}</td>
                         <td>${client.name}</td>
                         <td>${client.cpf}</td>
                         <td>${client.email}</td>
-                        <td>${client.animal}</td>
+                        <td>${client.animal.name }</td>
                         <td>${client.personType}</td>
                         <td>
-                            <button onclick="editClient(${client.id})">Editar</button>
+                        <button class="edit-btn" onclick="editClient(${client.id})">Editar</button>
                         </td>
                     </tr>
                 `

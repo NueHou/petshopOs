@@ -2,7 +2,9 @@ package com.interno.resources;
 
 
 import com.interno.domains.Client;
+import com.interno.domains.ServiceList;
 import com.interno.domains.dtos.ClientDTO;
+import com.interno.domains.dtos.ServiceListDTO;
 import com.interno.services.ClientService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -15,6 +17,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping(value = "/clients")
@@ -64,6 +67,12 @@ public class ClientResource {
         return ResponseEntity.created(uri).build();
     }
 
+    @PreAuthorize("hasRole('EMPLOYEE') ")
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<ClientDTO> update(@PathVariable Integer id, @Valid @RequestBody ClientDTO objDto){
+        Client Obj = clientService.update(id, objDto);
+        return ResponseEntity.ok().body(new ClientDTO(Obj));
+    }
 
     @Operation(summary = "Deleta um cliente", description = "Deleta um cliente.")
     @PreAuthorize("hasRole('EMPLOYEE')")

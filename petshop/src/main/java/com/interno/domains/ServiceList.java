@@ -6,6 +6,8 @@ import com.interno.domains.enums.ServiceType;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Objects;
+
 @Entity
 @Table(name = "service")
 public class ServiceList {
@@ -97,19 +99,9 @@ public class ServiceList {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        ServiceList other = (ServiceList) obj;
-        if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        return true;
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        ServiceList that = (ServiceList) o;
+        return Objects.equals(id, that.id);
     }
 }

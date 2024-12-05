@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    document.getElementById('logoutButton').addEventListener('click', logout);
     const token = localStorage.getItem('jwtToken');
     const clientId = localStorage.getItem('editClientId');
     const form = document.getElementById('clientForm');
@@ -6,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Verifica se o usuário está autenticado
     if (!token) {
         alert('Você não está autenticado.');
-        window.location.href = 'login.html';
+        window.location.href = 'login/login.html';
         return;
     }
 
@@ -28,11 +29,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             const client = await response.json();
 
             // Popula os campos do formulário
-            document.getElementById('clientId').value = client.id || '';
             document.getElementById('name').value = client.name || '';
             document.getElementById('cpf').value = client.cpf || '';
             document.getElementById('email').value = client.email || '';
-            document.getElementById('animal').value = client.animal || '';
+            document.getElementById('animal').value = client.animal.name || '';
             document.getElementById('personType').value = client.personType || 'CLIENT', 'EMPLOYEE';
         } catch (error) {
             console.error(error.message);
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         event.preventDefault(); // Impede o envio padrão do formulário
 
         const clientData = {
-            id: document.getElementById('clientId').value || null,
             name: document.getElementById('name').value,
             cpf: document.getElementById('cpf').value,
             email: document.getElementById('email').value,
@@ -74,10 +73,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             alert('Cliente salvo com sucesso!');
-            window.location.href = 'clients.html';
+            window.location.href = 'client/clients.html';
         } catch (error) {
             console.error(error.message);
             alert('Erro ao salvar os dados do cliente.');
         }
     });
+    function logout() {
+        localStorage.removeItem('jwtToken'); // Remove o token armazenado
+        alert('Logout realizado com sucesso.');
+        window.location.href = 'login.html';
+    }
 });

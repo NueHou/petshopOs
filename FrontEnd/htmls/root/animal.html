@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes</title>
-    <link rel="stylesheet" href="css/clients.css">
+    <link rel="stylesheet" href="css/animal.css">
 </head>
 <body>
     <header>
-        <h1>Lista de Clientes</h1>
-        <button id="logoutButton">Sair</button>
+        <h1>Lista de Animais</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="clients.html">Clientes</a>
+            <button id="logoutButton">Sair</button>
+        </nav>
     </header>
     <main>
-        <button id="createClientButton">Novo Cliente</button>
+        <button id="createAnimalButton">Novo Animal</button>
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Email</th>
-                    <th>Animal</th>
                     <th>Tipo</th>
+                    <th>Raça</th>
                 </tr>
             </thead>
-            <tbody id="clientList"></tbody>
+            <tbody id="animalList"></tbody>
         </table>
     </main>
-    <script src="js/clients.js"></script>
+    <script src="js/animal.js"></script>
 </body>
 </html>
