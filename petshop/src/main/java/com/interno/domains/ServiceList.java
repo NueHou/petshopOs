@@ -14,9 +14,9 @@ public class ServiceList {
 
     @Id
     private Integer id;
-    private Double valorTotal;
+    private Double fullPrice;
     private String description;
-
+    
 
     private ServiceType serviceType;
 
@@ -32,12 +32,12 @@ public class ServiceList {
 
     }
 
-    public ServiceList(Integer id, Client client, Employee employee, String description, Double valorTotal, ServiceType serviceType) {
+    public ServiceList(Integer id, Client client, Employee employee, String description, Double fullPrice, ServiceType serviceType) {
         this.id = id;
         this.client = client;
         this.employee = employee;
         this.description = description;
-        this.valorTotal = valorTotal;
+        this.fullPrice = fullPrice;
         this.serviceType = serviceType;
     }
 
@@ -50,12 +50,12 @@ public class ServiceList {
         this.id = id;
     }
 
-    public Double getValorTotal() {
-        return valorTotal;
+    public Double getFullPrice() {
+        return fullPrice;
     }
 
-    public void setValorTotal(Double valorTotal) {
-        this.valorTotal = valorTotal;
+    public void setFullPrice(Double fullPrice) {
+        this.fullPrice = fullPrice;
     }
 
     public String getDescription() {

@@ -62,7 +62,7 @@ public class ClientResource {
     @PreAuthorize("hasRole('EMPLOYEE') ")
     @PostMapping
     public ResponseEntity<ClientDTO> create(@Valid @RequestBody ClientDTO objDto, Integer id){
-        Client newObj = clientService.create(id, objDto);
+        Client newObj = clientService.create(objDto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newObj.getId()).toUri();
         return ResponseEntity.created(uri).build();
     }
@@ -76,7 +76,7 @@ public class ClientResource {
 
     @Operation(summary = "Deleta um cliente", description = "Deleta um cliente.")
     @PreAuthorize("hasRole('EMPLOYEE')")
-    @DeleteMapping
+    @DeleteMapping(value = "/{id}")
     public ResponseEntity<ClientDTO> delete(@PathVariable Integer id){
         clientService.delete(id);
         return ResponseEntity.noContent().build();

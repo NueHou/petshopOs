@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.I.S Petshop</title>
+    <link rel="stylesheet" href="css/client-form.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Serviços</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <button id="logoutButton">Sair</button>
+            </nav>
+    </header>
+    <main>
+        <form id="serviceForm">
+            
+
+            <label for="fullPrice">Valor Total</label>
+            <input type="text" id="fullPrice" required>
+
+            <label for="descripttion">Descrição:</label>
+            <input type="text" id="description" required>
+
+            <label for="type">Tipo:</label>
+            <select id="serviceType">
+                <option value="BATH">BATH</option>
+                <option value="GROOM">GROOM</option>
+                <option value="APPOINTMENT">APPOINTMENT</option>
+            </select>
+            <label for="idClient">Id Cliente:</label>
+            <input type="text" id="idClient" required>
+
+            <label for="idEmployee">Id Funcionario:</label>
+            <input type="text" id="idEmployee" required>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </main>
+    <script src="js/service-form.js"></script>
+</body>
+</html>

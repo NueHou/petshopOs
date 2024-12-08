@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Cadastro de Cliente</h1>
+        <h1>Cadastro de Empregados</h1>
         <nav>
             <a href="home.html">Home</a>
             <a href="animal.html">Animais</a>
@@ -18,10 +18,7 @@
             </nav>
     </header>
     <main>
-        <form id="clientForm">
-            <input type="hidden" id="clientId">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" required>
+        <form id="employeeForm">
 
             <label for="cpf">CPF:</label>
             <input type="text" id="cpf" required>
@@ -34,15 +31,12 @@
 
             <label for="personType">Tipo:</label>
             <select id="personType">
-                <option value="CLIENT">Client</option>
+                <option value="EPLOYEE">Employee</option>
             </select>
             
-            <label for="animal">Animal:</label>
-            <input type="animal" id="animal" required>
-
             <button type="submit">Salvar</button>
         </form>
     </main>
-    <script src="js/client-form.js"></script>
+    <script src="js/employee-form.js"></script>
 </body>
 </html>

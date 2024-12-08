@@ -8,30 +8,31 @@
 </head>
 <body>
     <header>
-        <h1>Lista de Clientes</h1>
+        <h1>Lista de Serviços</h1>
         <nav>
         <a href="home.html">Home</a>
         <a href="animal.html">Animais</a>
+        <a href="clients.html">Clientes</a>
         <a href="employee.html">Empregados</a>
-        <a href="service.html">Serviços</a>
         <button id="logoutButton">Sair</button>
         </nav>
     </header>
     <main>
-        <button id="createClientButton">Novo Cliente</button>
+        <button id="createServiceButton">Novo Serviço</button>
         <table>
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Email</th>
-                    <th>Animal</th>
-                    <th>Tipo</th>
+                    <th>Id</th>
+                    <th>Valor Total</th>
+                    <th>Descrição</th>
+                    <th>Tipo de Serviço</th>
+                    <th>Id do Funcionario</th>
+                    <th>Id do Cliente</th>
                 </tr>
             </thead>
-            <tbody id="clientsList"></tbody>
+            <tbody id="serviceList"></tbody>
         </table>
     </main>
-    <script src="js/clients.js"></script>
+    <script src="js/service.js"></script>
 </body>
 </html>

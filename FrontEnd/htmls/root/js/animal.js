@@ -24,11 +24,13 @@ async function fetchAnimals() {
             .map(
                 animal => `
                     <tr>
+                        <td>${animal.id}</td>
                         <td>${animal.name}</td>
                         <td>${animal.type}</td>
                         <td>${animal.race}</td>
                         <td>
-                        <button class="edit-btn" onclick="editAnimal(${animal.id})">Editar</button>
+                        <button class="editButton" onclick="editAnimal(${animal.id})">Editar</button>
+                        <button class="deleteButton" onclick="deleteAnimal(${animal.id})">Excluir</button>
                         </td>
                     </tr>
                 `
@@ -37,6 +39,43 @@ async function fetchAnimals() {
     } catch (error) {
         console.error(error.message);
     }
+}
+
+// Função para deletar cliente
+async function deleteAnimal(animalId) {
+    const token = localStorage.getItem('jwtToken');
+    try {
+        const response = await fetch(`http://localhost:8080/animal/${animalId}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': token
+            }
+        });
+
+        if (response.ok) {
+            alert('Animal excluído com sucesso!');
+            fetchAnimals(); // Atualiza a lista de clientes
+        } else {
+            alert('Erro ao excluir Animal!');
+            console.error(await response.text());
+        }
+    } catch (error) {
+        console.error('Erro ao conectar ao servidor:', error);
+    }
+}
+
+// Adiciona evento aos botões de excluir
+function attachDeleteEvents() {
+    const deleteButtons = document.querySelectorAll('.deleteButton');
+    deleteButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const animalId = button.getAttribute('data-id');
+            const confirmDelete = confirm('Tem certeza que deseja excluir este cliente?');
+            if (confirmDelete) {
+                deleteClient(animalId);
+            }
+        });
+    });
 }
 
 window.editAnimal = id => {

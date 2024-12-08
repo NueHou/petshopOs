@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('logoutButton').addEventListener('click', logout);
     const token = localStorage.getItem('jwtToken');
-    const clientId = localStorage.getItem('editClientId');
-    const form = document.getElementById('clientForm');
+    const employeesId = localStorage.getItem('editEmployeeId');
+    const form = document.getElementById('employeeForm');
 
     // Verifica se o usuário está autenticado
     if (!token) {
@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Carrega os dados do cliente se estiver em modo de edição
-    if (clientId) {
+    if (employeesId) {
         try {
-            const response = await fetch(`http://localhost:8080/clients/${clientId}`, {
+            const response = await fetch(`http://localhost:8080/employees/${employeesId}`, {
                 method: 'GET',
                 headers: {
                     Authorization: token,
@@ -26,19 +26,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 throw new Error('Erro ao carregar os dados do cliente.');
             }
 
-            const client = await response.json();
+            const employee = await response.json();
 
             // Popula os campos do formulário
-            document.getElementById('name').value = client.name || '';
-            document.getElementById('cpf').value = client.cpf || '';
-            document.getElementById('email').value = client.email || '';
-            document.getElementById('password').value = client.password || '';
-            document.getElementById('animal').value = client.animal.name || '';
-            document.getElementById('personType').value = client.personType || 'CLIENT';
-            document.getElementById('animal').value = client.animal || '';
+            document.getElementById('name').value = employee.name || '';
+            document.getElementById('cpf').value = employee.cpf || '';
+            document.getElementById('email').value = employee.email || '';
+            document.getElementById('password').value = employee.password || '';
+            document.getElementById('personType').value = employee.personType || 'EMPLOYEE';
         } catch (error) {
             console.error(error.message);
-            alert('Erro ao carregar os dados do cliente.');
+            alert('Erro ao carregar os dados do employee.');
         }
     }
 
@@ -46,20 +44,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     form.addEventListener('submit', async event => {
         event.preventDefault(); // Impede o envio padrão do formulário
 
-        const clientData = {
-            name: document.getElementById('name').value,
+        const employeeData = {
             cpf: document.getElementById('cpf').value,
             password: document.getElementById('password').value,
             email: document.getElementById('email').value,
             personType: document.getElementById('personType').value,
-            animal: document.getElementById('animal').value
         };
 
-        const url = clientId
-            ? `http://localhost:8080/clients/${clientId}`
-            : 'http://localhost:8080/clients';
+        const url = employeesId
+            ? `http://localhost:8080/employees/${employeesId}`
+            : 'http://localhost:8080/employees';
 
-        const method = clientId ? 'PUT' : 'POST';
+        const method = employeesId ? 'PUT' : 'POST';
 
         try {
             const response = await fetch(url, {
@@ -68,7 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     Authorization: token,
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(clientData),
+                body: JSON.stringify(employeeData),
             });
 
             if (!response.ok) {
@@ -76,7 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             alert('Cliente salvo com sucesso!');
-            window.location.href = 'client/clients.html';
+            window.location.href = 'employee.html';
         } catch (error) {
             console.error(error.message);
             alert('Erro ao salvar os dados do cliente.');

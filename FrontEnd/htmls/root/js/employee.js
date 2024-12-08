@@ -1,6 +1,6 @@
 
 // Função para exibir os clientes na página
-async function fetchClients() {
+async function fetchEmployees() {
     const token = localStorage.getItem('jwtToken'); // Recupera o token armazenado
 
     if (!token) {
@@ -9,7 +9,7 @@ async function fetchClients() {
         return;
     }
     try {
-        const response = await fetch('http://localhost:8080/clients', {
+        const response = await fetch('http://localhost:8080/employees', {
             method: 'GET',
             headers: {
                 Authorization: token,
@@ -17,21 +17,21 @@ async function fetchClients() {
             },
         });
 
-        if (!response.ok) throw new Error('Erro ao carregar animais.');
-        const client = await response.json();
+        if (!response.ok) throw new Error('Erro ao carregar employee.');
+        const employee = await response.json();
 
-        clientsList.innerHTML = client
+        employeeList.innerHTML = employee
             .map(
-                client => `
+                employee => `
                     <tr>
-                        <td>${client.name}</td>
-                        <td>${client.cpf}</td>
-                        <td>${client.email}</td>
-                        <td>${client.animal.name }</td>
-                        <td>${client.personType}</td>
+                        <td>${employee.id}</td>
+                        <td>${employee.name}</td>
+                        <td>${employee.cpf}</td>
+                        <td>${employee.email}</td>
+                        <td>${employee.personType}</td>
                         <td>
-                        <button class="editButton" onclick="editClient(${client.id})">Editar</button>
-                        <button class="deleteButton" onclick="deleteClient(${client.id})">Excluir</button>
+                        <button class="editButton" onclick="editEmployee(${employee.id})">Editar</button>
+                        <button class="deleteButton" onclick="deleteEmployee(${employee.id})">Excluir</button>
                         </td>
                     </tr>
                 `
@@ -42,22 +42,10 @@ async function fetchClients() {
     }
 }
 
-window.editClient = id => {
-    localStorage.setItem('editClientId', id);
-    window.location.href = 'client-form.html';
-};
-
-createClientButton.addEventListener('click', () => {
-    localStorage.removeItem('editClientId');
-    window.location.href = 'client-form.html';
-});
-
-
-// Função para deletar cliente
-async function deleteClient(clientId) {
+async function deleteEmployee(employeeId) {
     const token = localStorage.getItem('jwtToken');
     try {
-        const response = await fetch(`http://localhost:8080/clients/${clientId}`, {
+        const response = await fetch(`http://localhost:8080/employees/${employeeId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': token
@@ -65,10 +53,10 @@ async function deleteClient(clientId) {
         });
 
         if (response.ok) {
-            alert('Cliente excluído com sucesso!');
-            fetchClients(); // Atualiza a lista de clientes
+            alert('employee excluído com sucesso!');
+            fetchEmployees(); // Atualiza a lista de clientes
         } else {
-            alert('Erro ao excluir cliente!');
+            alert('Erro ao excluir employee!');
             console.error(await response.text());
         }
     } catch (error) {
@@ -81,16 +69,27 @@ function attachDeleteEvents() {
     const deleteButtons = document.querySelectorAll('.deleteButton');
     deleteButtons.forEach((button) => {
         button.addEventListener('click', () => {
-            const clientId = button.getAttribute('data-id');
+            const employeeId = button.getAttribute('data-id');
             const confirmDelete = confirm('Tem certeza que deseja excluir este cliente?');
             if (confirmDelete) {
-                deleteClient(clientId);
+                deleteClient(employeeId);
             }
         });
     });
 }
 
-fetchClients();
+
+window.editEmployee = id => {
+    localStorage.setItem('editEmployeeId', id);
+    window.location.href = 'employee-form.html';
+};
+
+createEmployeeButton.addEventListener('click', () => {
+    localStorage.removeItem('editEmployeeId');
+    window.location.href = 'employee-form.html';
+});
+
+fetchEmployees();
 
 // Função para realizar logout
 function logout() {
@@ -101,6 +100,6 @@ function logout() {
 
 // Adiciona eventos ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
-    fetchClients();
+    fetchEmployees();
     document.getElementById('logoutButton').addEventListener('click', logout);
 });

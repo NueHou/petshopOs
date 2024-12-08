@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('logoutButton').addEventListener('click', logout);
     const token = localStorage.getItem('jwtToken');
-    const animalId = localStorage.getItem('editAnimalId');
-    const form = document.getElementById('animalForm');
+    const serviceId = localStorage.getItem('editServiceId');
+    const form = document.getElementById('serviceForm');
 
     // Verifica se o usuário está autenticado
     if (!token) {
@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Carrega os dados do cliente se estiver em modo de edição
-    if (animalId) {
+    if (serviceId) {
         try {
-            const response = await fetch(`http://localhost:8080/animal/${animalId}`, {
+            const response = await fetch(`http://localhost:8080/service/${serviceId}`, {
                 method: 'GET',
                 headers: {
                     Authorization: token,
@@ -23,18 +23,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             if (!response.ok) {
-                throw new Error('Erro ao carregar os dados do animal.');
+                throw new Error('Erro ao carregar os dados do service.');
             }
 
-            const animal = await response.json();
+            const service = await response.json();
 
             // Popula os campos do formulário
-            document.getElementById('name').value = animal.name || '';
-            document.getElementById('type').value = animal.type || '';
-            document.getElementById('race').value = animal.race || '';
+            document.getElementById('fullPrice').value = service.fullPrice || '';
+            document.getElementById('serviceType').value = service.serviceType || 'BATH', 'GROOM', 'APPOINTMENT';
+            document.getElementById('description').value = service.description || '';
+            document.getElementById('client').value = service.client.id || '';
+            document.getElementById('employee').value = service.employee.id || '';
         } catch (error) {
             console.error(error.message);
-            alert('Erro ao carregar os dados do animal.');
+            alert('Erro ao carregar os dados do serviço.');
         }
     }
 
@@ -42,27 +44,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     form.addEventListener('submit', async event => {
         event.preventDefault(); // Impede o envio padrão do formulário
 
-        const animalData = {
-            name: document.getElementById('name').value,
-            type: document.getElementById('type').value,
-            race: document.getElementById('race').value,
+        const serviceData = {
+            fullPrice: document.getElementById('fullPrice').value,
+            serviceType: document.getElementById('serviceType').value,
+            description: document.getElementById('description').value,
+            client: document.getElementById('client').value,
+            employee: document.getElementById('employee').value,
         };
 
-        const url = animalId
-            ? `http://localhost:8080/animal/${animalId}`
-            : 'http://localhost:8080/animal';
+        const url = serviceId
+            ? `http://localhost:8080/service/${serviceId}`
+            : 'http://localhost:8080/service';
 
-        const method = animalId ? 'PUT' : 'POST';
+        const method = serviceId ? 'PUT' : 'POST';
 
         try {
             const response = await fetch(url, {
-                
                 method,
                 headers: {
                     Authorization: token,
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(animalData),
+                body: JSON.stringify(serviceData),
             });
 
             if (!response.ok) {
@@ -70,7 +73,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             alert('animal salvo com sucesso!');
-            window.location.href = 'animal.html';
+            window.location.href = 'service.html';
         } catch (error) {
             console.error(error.message);
             alert('Erro ao salvar os dados do animal.');

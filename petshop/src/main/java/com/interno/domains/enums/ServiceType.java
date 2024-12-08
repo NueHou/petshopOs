@@ -2,7 +2,7 @@ package com.interno.domains.enums;
 
 public enum ServiceType {
 
-    BATH(0, "ROLE_BATHS"), GROOM(1, "ROLE_GROOMS"), APPOINTMENT(2, "ROLE_APPOINTMENTS"), SELL(3, "ROLE_SELLS");
+    BATH(0, "ROLE_BATHS"), GROOM(1, "ROLE_GROOMS"), APPOINTMENT(2, "ROLE_APPOINTMENTS");
 
     private Integer id;
     private String serviceType;

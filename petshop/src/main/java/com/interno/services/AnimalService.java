@@ -55,7 +55,7 @@ public class AnimalService {
     private void ValidaPorName(AnimalDTO objDto) {
         Optional<Animal> obj = animalRepository.findByName(objDto.getName());
         if(obj.isPresent() && obj.get().getId() != objDto.getId()){
-            throw new DataIntegrityViolationException("CPF já cadastrado no sistema");
+            throw new DataIntegrityViolationException("Nome já cadastrado no sistema");
         }
 
     }

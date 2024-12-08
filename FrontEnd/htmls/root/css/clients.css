@@ -60,6 +60,50 @@ button#createClientButton {
     border-radius: 5px;
     font-size: 1rem;
 }
+button.deleteButton {
+    background-color: #d9534f; /* Vermelho claro */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+button.deleteButton:hover {
+    background-color: #c9302c; /* Vermelho mais escuro */
+}
+button#createEmployeeButton {
+    background-color: #777; /* Botão cinza médio */
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+button.editButton {
+    background-color: #777; /* Botão cinza médio */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+button#createServiceButton {
+    background-color: #777; /* Botão cinza médio */
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
 
 button#createClientButton:hover {
     background-color: #666; /* Tom mais escuro ao passar o mouse */

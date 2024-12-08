@@ -1,6 +1,6 @@
 
 // Função para exibir os clientes na página
-async function fetchClients() {
+async function fetchService() {
     const token = localStorage.getItem('jwtToken'); // Recupera o token armazenado
 
     if (!token) {
@@ -9,7 +9,7 @@ async function fetchClients() {
         return;
     }
     try {
-        const response = await fetch('http://localhost:8080/clients', {
+        const response = await fetch('http://localhost:8080/service', {
             method: 'GET',
             headers: {
                 Authorization: token,
@@ -17,21 +17,22 @@ async function fetchClients() {
             },
         });
 
-        if (!response.ok) throw new Error('Erro ao carregar animais.');
-        const client = await response.json();
+        if (!response.ok) throw new Error('Erro ao carregar serviços.');
+        const service = await response.json();
 
-        clientsList.innerHTML = client
+        serviceList.innerHTML = service
             .map(
-                client => `
+                service => `
                     <tr>
-                        <td>${client.name}</td>
-                        <td>${client.cpf}</td>
-                        <td>${client.email}</td>
-                        <td>${client.animal.name }</td>
-                        <td>${client.personType}</td>
+                        <td>${service.id}</td>
+                        <td>${service.fullPrice}</td>
+                        <td>${service.description}</td>
+                        <td>${service.serviceType}</td>
+                        <td>${service.employee}</td>
+                        <td>${service.client}</td>
                         <td>
-                        <button class="editButton" onclick="editClient(${client.id})">Editar</button>
-                        <button class="deleteButton" onclick="deleteClient(${client.id})">Excluir</button>
+                        <button class="editButton" onclick="editService(${service.id})">Editar</button>
+                        <button class="deleteButton" onclick="deleteService(${service.id})">Excluir</button>
                         </td>
                     </tr>
                 `
@@ -40,24 +41,14 @@ async function fetchClients() {
     } catch (error) {
         console.error(error.message);
     }
+    
 }
 
-window.editClient = id => {
-    localStorage.setItem('editClientId', id);
-    window.location.href = 'client-form.html';
-};
-
-createClientButton.addEventListener('click', () => {
-    localStorage.removeItem('editClientId');
-    window.location.href = 'client-form.html';
-});
-
-
 // Função para deletar cliente
-async function deleteClient(clientId) {
+async function deleteService(serviceId) {
     const token = localStorage.getItem('jwtToken');
     try {
-        const response = await fetch(`http://localhost:8080/clients/${clientId}`, {
+        const response = await fetch(`http://localhost:8080/service/${serviceId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': token
@@ -65,10 +56,10 @@ async function deleteClient(clientId) {
         });
 
         if (response.ok) {
-            alert('Cliente excluído com sucesso!');
-            fetchClients(); // Atualiza a lista de clientes
+            alert('Service excluído com sucesso!');
+            fetchService(); // Atualiza a lista de service
         } else {
-            alert('Erro ao excluir cliente!');
+            alert('Erro ao excluir service!');
             console.error(await response.text());
         }
     } catch (error) {
@@ -81,16 +72,26 @@ function attachDeleteEvents() {
     const deleteButtons = document.querySelectorAll('.deleteButton');
     deleteButtons.forEach((button) => {
         button.addEventListener('click', () => {
-            const clientId = button.getAttribute('data-id');
-            const confirmDelete = confirm('Tem certeza que deseja excluir este cliente?');
+            const serviceId = button.getAttribute('data-id');
+            const confirmDelete = confirm('Tem certeza que deseja excluir este service?');
             if (confirmDelete) {
-                deleteClient(clientId);
+                deleteService(serviceId);
             }
         });
     });
 }
 
-fetchClients();
+window.editService = id => {
+    localStorage.setItem('editServiceId', id);
+    window.location.href = 'service-form.html';
+};
+
+createServiceButton.addEventListener('click', () => {
+    localStorage.removeItem('editServiceId');
+    window.location.href = 'service-form.html';
+});
+
+fetchService();
 
 // Função para realizar logout
 function logout() {
@@ -101,6 +102,6 @@ function logout() {
 
 // Adiciona eventos ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
-    fetchClients();
+    fetchService();
     document.getElementById('logoutButton').addEventListener('click', logout);
 });

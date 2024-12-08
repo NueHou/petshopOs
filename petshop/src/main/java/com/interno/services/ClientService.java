@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -42,8 +41,8 @@ public class ClientService {
         return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Email:"+email));
     }
 
-    public Client create(Integer id, ClientDTO objDto){
-        objDto.setId(id);
+    public Client create(ClientDTO objDto){
+        objDto.setId(null);
         objDto.setPassword(encoder.encode(objDto.getPassword()));
         ValidaPorCPFeEmail(objDto);
         Client newObj = new Client(objDto);

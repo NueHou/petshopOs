@@ -15,7 +15,7 @@ public class ServiceListDTO {
 
     @NotNull(message = "O campo  não pode ser nulo")
     @NotBlank(message = "O campo  não pode ser vazio")
-    private Double valorTotal;
+    private Double fullPrice;
     @NotNull(message = "O campo  não pode ser nulo")
     @NotBlank(message = "O campo  não pode ser vazio")
     private String description;
@@ -31,7 +31,7 @@ public class ServiceListDTO {
 
     public ServiceListDTO(ServiceList obj){
         this.id = obj.getId();
-        this.valorTotal = obj.getValorTotal();
+        this.fullPrice = obj.getFullPrice();
         this.description = obj.getDescription();
         this.client = obj.getClient().getId();
         this.employee = obj.getEmployee().getId();
@@ -70,12 +70,12 @@ public class ServiceListDTO {
         this.description = description;
     }
 
-    public Double getValorTotal() {
-        return valorTotal;
+    public Double getFullPrice() {
+        return fullPrice;
     }
 
-    public void setValorTotal(Double valorTotal) {
-        this.valorTotal = valorTotal;
+    public void setFullPrice(Double fullPrice) {
+        this.fullPrice = fullPrice;
     }
 
     public ServiceType getServiceType() {
