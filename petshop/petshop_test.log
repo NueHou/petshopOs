@@ -73558,3 +73558,1882 @@ org.hibernate.id.IdentifierGenerationException: Identifier of entity 'com.intern
 2024-12-09T13:39:53.822-03:00  WARN 15276 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
 2024-12-09T13:39:53.822-03:00  INFO 15276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-12-09T13:39:53.822-03:00  INFO 15276 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-09T13:58:58.550-03:00  INFO 17392 --- [restartedMain] com.interno.petshop.PetshopApplication   : Starting PetshopApplication using Java 17.0.10 with PID 17392 (C:\Users\55179\Documents\Programming\Spring\SistemaPetshop\petshop\target\classes started by 55179 in C:\Users\55179\Documents\Programming\Spring\SistemaPetshop\petshop)
+2024-12-09T13:58:58.557-03:00  INFO 17392 --- [restartedMain] com.interno.petshop.PetshopApplication   : The following 1 profile is active: "test"
+2024-12-09T13:58:58.638-03:00  INFO 17392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-09T13:58:58.638-03:00  INFO 17392 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-09T13:59:00.099-03:00  INFO 17392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-09T13:59:00.198-03:00  INFO 17392 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 5 JPA repository interfaces.
+2024-12-09T13:59:01.550-03:00  INFO 17392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-09T13:59:01.565-03:00  INFO 17392 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-09T13:59:01.565-03:00  INFO 17392 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-12-09T13:59:01.651-03:00  INFO 17392 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-09T13:59:01.652-03:00  INFO 17392 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3014 ms
+2024-12-09T13:59:01.695-03:00  INFO 17392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-09T13:59:02.052-03:00  INFO 17392 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:petshop user=SA
+2024-12-09T13:59:02.054-03:00  INFO 17392 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-09T13:59:02.064-03:00  INFO 17392 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:petshop'
+2024-12-09T13:59:02.416-03:00  INFO 17392 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-09T13:59:02.487-03:00  INFO 17392 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-12-09T13:59:02.529-03:00  INFO 17392 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@1679d602
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@1679d602
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@1679d602
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@33f56bf
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@33f56bf
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@385988fb
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@385988fb
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@14a13b97
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@14a13b97
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@4cb026c7
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@4cb026c7
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@4cb026c7
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@35c30b40
+2024-12-09T13:59:02.775-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@35c30b40
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@35c30b40
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@11022622
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@11022622
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@3c36a649
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@378e5957
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@378e5957
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@267d88f1
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@26ce992a
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@2f437754
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@2f437754
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@2f437754
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@6ac2c70a
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@6ac2c70a
+2024-12-09T13:59:02.778-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@6ac2c70a
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@20b2f0a3
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@20b2f0a3
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@20b2f0a3
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@72e73a56
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@72e73a56
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@72e73a56
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@46aa1a89
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@46aa1a89
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@46aa1a89
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@3a2c6fc1
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@3a2c6fc1
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@daca7cf
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@daca7cf
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@46d219a6
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@46d219a6
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@46d219a6
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@503a3da7
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@9b11206
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@9b11206
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@614b5e20
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@37826486
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@37826486
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@37826486
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@3654a0d4
+2024-12-09T13:59:02.780-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@37f4b53a
+2024-12-09T13:59:02.785-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@c7557ba
+2024-12-09T13:59:02.785-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@2877a4e6
+2024-12-09T13:59:02.785-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@2877a4e6
+2024-12-09T13:59:02.785-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@3b36e33c
+2024-12-09T13:59:02.785-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@3b36e33c
+2024-12-09T13:59:02.788-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@29f9cc05
+2024-12-09T13:59:02.788-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@f978607
+2024-12-09T13:59:02.788-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@1ad25387
+2024-12-09T13:59:02.788-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@16f16ce2
+2024-12-09T13:59:02.788-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@718f03dd
+2024-12-09T13:59:02.788-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@421b1455
+2024-12-09T13:59:02.788-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@4a5d39fa
+2024-12-09T13:59:02.788-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@4a5d39fa
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@57d6da2f
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@57d6da2f
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@5e4eaae3
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@5e4eaae3
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@446da4c3
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@446da4c3
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@675cc75d
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@675cc75d
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@6ba6e3b
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@2d88d5bd
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@46a3773
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@46a3773
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@58d7e8c
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@501313b0
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@3bdd1132
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@6e596895
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@6e596895
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@ce02cc
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@48080ff6
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@1b8fc344
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@1b8fc344
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@3e371d60
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@3e371d60
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@4e1fb008
+2024-12-09T13:59:02.790-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@4e1fb008
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@4e1fb008
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@46e07182
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@46e07182
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@46e07182
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@23101ff9
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@25cacae6
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@16e6b1a7
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@16e6b1a7
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@534fbe98
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@534fbe98
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@534fbe98
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@70839cdf
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@3ede5d3
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@20a50780
+2024-12-09T13:59:02.795-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@20a50780
+2024-12-09T13:59:02.798-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@eb0c672
+2024-12-09T13:59:02.798-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@eb0c672
+2024-12-09T13:59:02.798-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@eb0c672
+2024-12-09T13:59:02.798-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@6239d61f
+2024-12-09T13:59:02.798-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@6239d61f
+2024-12-09T13:59:02.798-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@e9664f6
+2024-12-09T13:59:02.798-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@e9664f6
+2024-12-09T13:59:02.798-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@607fba3
+2024-12-09T13:59:02.798-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@607fba3
+2024-12-09T13:59:02.800-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@e8c2e47
+2024-12-09T13:59:02.801-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@e8c2e47
+2024-12-09T13:59:02.801-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@22a988a7
+2024-12-09T13:59:02.801-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@22a988a7
+2024-12-09T13:59:02.801-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@1fa5f9d0
+2024-12-09T13:59:02.801-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@2646c364
+2024-12-09T13:59:02.815-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@1312649
+2024-12-09T13:59:02.815-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@1312649
+2024-12-09T13:59:02.818-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@41636aed
+2024-12-09T13:59:02.818-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@12c475c3
+2024-12-09T13:59:02.818-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@1e29466b
+2024-12-09T13:59:02.818-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@4ca6dfee
+2024-12-09T13:59:02.818-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@1648e095
+2024-12-09T13:59:02.820-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@2713f5f2
+2024-12-09T13:59:02.820-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@73dde565
+2024-12-09T13:59:02.820-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@9fe1d5f
+2024-12-09T13:59:02.820-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@586318bd
+2024-12-09T13:59:03.215-03:00  INFO 17392 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-09T13:59:03.355-03:00 DEBUG 17392 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2024-12-09T13:59:03.355-03:00 DEBUG 17392 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2024-12-09T13:59:03.355-03:00 DEBUG 17392 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2024-12-09T13:59:03.355-03:00 DEBUG 17392 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-12-09T13:59:03.355-03:00 DEBUG 17392 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(STREAM_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-12-09T13:59:03.360-03:00 DEBUG 17392 --- [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2024-12-09T13:59:03.365-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2024-12-09T13:59:03.365-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2024-12-09T13:59:03.365-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2024-12-09T13:59:03.373-03:00 DEBUG 17392 --- [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@6049a6cf] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@4796ff3e]
+2024-12-09T13:59:03.779-03:00  WARN 17392 --- [restartedMain] o.h.boot.model.internal.EntityBinder     : HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.interno.domains.Client
+2024-12-09T13:59:03.799-03:00  WARN 17392 --- [restartedMain] o.h.boot.model.internal.EntityBinder     : HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.interno.domains.Employee
+2024-12-09T13:59:04.950-03:00  INFO 17392 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-09T13:59:04.950-03:00 DEBUG 17392 --- [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@6049a6cf] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@4ae98552]
+2024-12-09T13:59:04.985-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists animal cascade 
+2024-12-09T13:59:05.000-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists perfis cascade 
+2024-12-09T13:59:05.001-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists person cascade 
+2024-12-09T13:59:05.005-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists service cascade 
+2024-12-09T13:59:05.015-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    create table animal (
+        id integer generated by default as identity,
+        name varchar(255),
+        race varchar(255),
+        type varchar(255),
+        primary key (id)
+    )
+2024-12-09T13:59:05.035-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    create table perfis (
+        person_id integer not null,
+        person_type integer
+    )
+2024-12-09T13:59:05.035-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    create table person (
+        animal_id integer unique,
+        created_at date,
+        id integer generated by default as identity,
+        dtype varchar(31) not null,
+        cpf varchar(255) unique,
+        email varchar(255) unique,
+        name varchar(255),
+        password varchar(255),
+        primary key (id)
+    )
+2024-12-09T13:59:05.046-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    create table service (
+        client_id integer,
+        employee_id integer,
+        full_price float(53),
+        id integer generated by default as identity,
+        service_type tinyint check (service_type between 0 and 2),
+        description varchar(255),
+        primary key (id)
+    )
+2024-12-09T13:59:05.055-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists perfis 
+       add constraint FKi5yvhrylfahu81aotf8qxjqai 
+       foreign key (person_id) 
+       references person
+2024-12-09T13:59:05.075-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists person 
+       add constraint FK1572urunupvgyggea0o9yhdrh 
+       foreign key (animal_id) 
+       references animal
+2024-12-09T13:59:05.075-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists service 
+       add constraint FKhsjjxw109eblm7uml457cv2wl 
+       foreign key (client_id) 
+       references person
+2024-12-09T13:59:05.075-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    alter table if exists service 
+       add constraint FKjhwj5khr08pw5bkm9arondrbi 
+       foreign key (employee_id) 
+       references person
+2024-12-09T13:59:05.075-03:00 TRACE 17392 --- [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@4ae98552] for TypeConfiguration
+2024-12-09T13:59:05.075-03:00  INFO 17392 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09T13:59:06.180-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:06.225-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        animal
+        (name, race, type, id) 
+    values
+        (?, ?, ?, default)
+2024-12-09T13:59:06.245-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:06.245-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        animal
+        (name, race, type, id) 
+    values
+        (?, ?, ?, default)
+2024-12-09T13:59:06.245-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        person c1_0 
+    left join
+        perfis pt1_0 
+            on c1_0.id=pt1_0.person_id 
+    left join
+        animal a1_0 
+            on a1_0.id=c1_0.animal_id 
+    where
+        c1_0.dtype='Client' 
+        and c1_0.id=?
+2024-12-09T13:59:06.255-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:06.265-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        person
+        (cpf, created_at, email, name, password, animal_id, dtype, id) 
+    values
+        (?, ?, ?, ?, ?, ?, 'Client', default)
+2024-12-09T13:59:06.275-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2024-12-09T13:59:06.275-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        person c1_0 
+    left join
+        perfis pt1_0 
+            on c1_0.id=pt1_0.person_id 
+    left join
+        animal a1_0 
+            on a1_0.id=c1_0.animal_id 
+    where
+        c1_0.dtype='Client' 
+        and c1_0.id=?
+2024-12-09T13:59:06.275-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:06.275-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        person
+        (cpf, created_at, email, name, password, animal_id, dtype, id) 
+    values
+        (?, ?, ?, ?, ?, ?, 'Client', default)
+2024-12-09T13:59:06.284-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2024-12-09T13:59:06.284-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        e1_0.id,
+        e1_0.cpf,
+        e1_0.created_at,
+        e1_0.email,
+        e1_0.name,
+        e1_0.password,
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        person e1_0 
+    left join
+        perfis pt1_0 
+            on e1_0.id=pt1_0.person_id 
+    where
+        e1_0.dtype='Employee' 
+        and e1_0.id=?
+2024-12-09T13:59:06.284-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        person
+        (cpf, created_at, email, name, password, dtype, id) 
+    values
+        (?, ?, ?, ?, ?, 'Employee', default)
+2024-12-09T13:59:06.284-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2024-12-09T13:59:06.284-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        perfis
+        (person_id, person_type) 
+    values
+        (?, ?)
+2024-12-09T13:59:06.295-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        sl1_0.id,
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type,
+        sl1_0.description,
+        e1_0.id,
+        e1_0.cpf,
+        e1_0.created_at,
+        e1_0.email,
+        e1_0.name,
+        e1_0.password,
+        pt2_0.person_id,
+        pt2_0.person_type,
+        sl1_0.full_price,
+        sl1_0.service_type 
+    from
+        service sl1_0 
+    left join
+        (select
+            * 
+        from
+            person t 
+        where
+            t.dtype='Client') c1_0 
+            on c1_0.id=sl1_0.client_id 
+    left join
+        perfis pt1_0 
+            on c1_0.id=pt1_0.person_id 
+    left join
+        animal a1_0 
+            on a1_0.id=c1_0.animal_id 
+    left join
+        (select
+            * 
+        from
+            person t 
+        where
+            t.dtype='Employee') e1_0 
+            on e1_0.id=sl1_0.employee_id 
+    left join
+        perfis pt2_0 
+            on e1_0.id=pt2_0.person_id 
+    where
+        sl1_0.id=?
+2024-12-09T13:59:06.295-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        pt1_0.person_id,
+        pt1_0.person_type,
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        person c1_0 
+    left join
+        perfis pt1_0 
+            on c1_0.id=pt1_0.person_id 
+    left join
+        animal a1_0 
+            on a1_0.id=c1_0.animal_id 
+    where
+        c1_0.dtype='Client' 
+        and c1_0.id=?
+2024-12-09T13:59:06.295-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    select
+        e1_0.id,
+        e1_0.cpf,
+        e1_0.created_at,
+        e1_0.email,
+        e1_0.name,
+        e1_0.password,
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        person e1_0 
+    left join
+        perfis pt1_0 
+            on e1_0.id=pt1_0.person_id 
+    where
+        e1_0.dtype='Employee' 
+        and e1_0.id=?
+2024-12-09T13:59:06.295-03:00 DEBUG 17392 --- [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        service
+        (client_id, description, employee_id, full_price, service_type, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+2024-12-09T13:59:06.594-03:00  WARN 17392 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-09T13:59:07.679-03:00  INFO 17392 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@55baefe, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39b9d192, org.springframework.security.web.context.SecurityContextHolderFilter@2b1c09f0, org.springframework.security.web.header.HeaderWriterFilter@f87e9aa, org.springframework.web.filter.CorsFilter@5b1297d9, org.springframework.security.web.authentication.logout.LogoutFilter@237679f9, com.interno.security.JWTAuthenticationFilter@7052e0a3, com.interno.security.JWTAuthorizationFilter@28a68c09, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@af17dd6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38774e1f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5fe4fdce, org.springframework.security.web.session.SessionManagementFilter@7c0db88c, org.springframework.security.web.access.ExceptionTranslationFilter@76e30841, org.springframework.security.web.access.intercept.AuthorizationFilter@34d111e6]
+2024-12-09T13:59:08.105-03:00  INFO 17392 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-12-09T13:59:08.135-03:00  INFO 17392 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-12-09T13:59:08.149-03:00  INFO 17392 --- [restartedMain] com.interno.petshop.PetshopApplication   : Started PetshopApplication in 10.186 seconds (process running for 11.081)
+2024-12-09T13:59:10.248-03:00  INFO 17392 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09T13:59:10.248-03:00  INFO 17392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-09T13:59:10.249-03:00  INFO 17392 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-09T13:59:10.601-03:00 DEBUG 17392 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:10.605-03:00 DEBUG 17392 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:13.425-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:13.426-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:13.435-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:13.435-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:13.451-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        e1_0.id,
+        e1_0.cpf,
+        e1_0.created_at,
+        e1_0.email,
+        e1_0.name,
+        e1_0.password 
+    from
+        person e1_0 
+    where
+        e1_0.dtype='Employee'
+2024-12-09T13:59:13.452-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:13.474-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:13.474-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:13.480-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:13.484-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:13.488-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        e1_0.id,
+        e1_0.cpf,
+        e1_0.created_at,
+        e1_0.email,
+        e1_0.name,
+        e1_0.password 
+    from
+        person e1_0 
+    where
+        e1_0.dtype='Employee'
+2024-12-09T13:59:13.488-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:20.167-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:20.168-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:20.173-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:20.174-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:20.313-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        e1_0.id,
+        e1_0.cpf,
+        e1_0.created_at,
+        e1_0.email,
+        e1_0.name,
+        e1_0.password 
+    from
+        person e1_0 
+    where
+        e1_0.cpf=? 
+        and e1_0.dtype='Employee'
+2024-12-09T13:59:20.318-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        e1_0.id,
+        e1_0.cpf,
+        e1_0.created_at,
+        e1_0.email,
+        e1_0.name,
+        e1_0.password 
+    from
+        person e1_0 
+    where
+        e1_0.email=? 
+        and e1_0.dtype='Employee'
+2024-12-09T13:59:20.322-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    insert 
+    into
+        person
+        (cpf, created_at, email, name, password, dtype, id) 
+    values
+        (?, ?, ?, ?, ?, 'Employee', default)
+2024-12-09T13:59:21.532-03:00 DEBUG 17392 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:21.533-03:00 DEBUG 17392 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:21.542-03:00 DEBUG 17392 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:21.543-03:00 DEBUG 17392 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:21.548-03:00 DEBUG 17392 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        e1_0.id,
+        e1_0.cpf,
+        e1_0.created_at,
+        e1_0.email,
+        e1_0.name,
+        e1_0.password 
+    from
+        person e1_0 
+    where
+        e1_0.dtype='Employee'
+2024-12-09T13:59:21.548-03:00 DEBUG 17392 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:21.548-03:00 DEBUG 17392 --- [http-nio-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:21.555-03:00 DEBUG 17392 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:21.555-03:00 DEBUG 17392 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:21.555-03:00 DEBUG 17392 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:21.555-03:00 DEBUG 17392 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:21.566-03:00 DEBUG 17392 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        e1_0.id,
+        e1_0.cpf,
+        e1_0.created_at,
+        e1_0.email,
+        e1_0.name,
+        e1_0.password 
+    from
+        person e1_0 
+    where
+        e1_0.dtype='Employee'
+2024-12-09T13:59:21.566-03:00 DEBUG 17392 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:21.566-03:00 DEBUG 17392 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:22.979-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:22.980-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:22.988-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:22.989-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:22.993-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.animal_id 
+    from
+        person c1_0 
+    where
+        c1_0.dtype='Client'
+2024-12-09T13:59:22.994-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:22.996-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:22.998-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:23.000-03:00 DEBUG 17392 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:23.017-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:23.019-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:23.027-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:23.028-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:23.033-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.animal_id 
+    from
+        person c1_0 
+    where
+        c1_0.dtype='Client'
+2024-12-09T13:59:23.036-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:23.038-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:23.040-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:23.041-03:00 DEBUG 17392 --- [http-nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:23.736-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:23.737-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:23.741-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:23.742-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:23.744-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0
+2024-12-09T13:59:37.068-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:37.068-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:37.075-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:37.075-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:37.171-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.animal_id 
+    from
+        person c1_0 
+    where
+        c1_0.cpf=? 
+        and c1_0.dtype='Client'
+2024-12-09T13:59:37.175-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.animal_id 
+    from
+        person c1_0 
+    where
+        c1_0.email=? 
+        and c1_0.dtype='Client'
+2024-12-09T13:59:37.178-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    insert 
+    into
+        person
+        (cpf, created_at, email, name, password, animal_id, dtype, id) 
+    values
+        (?, ?, ?, ?, ?, ?, 'Client', default)
+2024-12-09T13:59:38.195-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:38.199-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:38.205-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:38.206-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:38.208-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.animal_id 
+    from
+        person c1_0 
+    where
+        c1_0.dtype='Client'
+2024-12-09T13:59:38.208-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:38.209-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:38.210-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:38.210-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:38.211-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:38.218-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:38.218-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:38.222-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:38.223-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:38.225-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.animal_id 
+    from
+        person c1_0 
+    where
+        c1_0.dtype='Client'
+2024-12-09T13:59:38.225-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:38.226-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:38.228-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:38.229-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:38.229-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:59.775-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:59.780-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:59.786-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:59.787-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:59.789-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.animal_id 
+    from
+        person c1_0 
+    where
+        c1_0.dtype='Client'
+2024-12-09T13:59:59.790-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:59.791-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:59.792-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:59.792-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:59.793-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:59.799-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:59.799-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:59.805-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T13:59:59.805-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:59.805-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        c1_0.id,
+        c1_0.cpf,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.name,
+        c1_0.password,
+        c1_0.animal_id 
+    from
+        person c1_0 
+    where
+        c1_0.dtype='Client'
+2024-12-09T13:59:59.805-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:59.814-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0 
+    where
+        a1_0.id=?
+2024-12-09T13:59:59.816-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:59.816-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T13:59:59.817-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T14:00:01.950-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T14:00:01.951-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T14:00:01.955-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T14:00:01.956-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T14:00:01.958-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0
+2024-12-09T14:00:01.968-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T14:00:01.969-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T14:00:01.974-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T14:00:01.974-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T14:00:01.980-03:00 DEBUG 17392 --- [http-nio-8080-exec-8] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0
+2024-12-09T14:00:06.963-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T14:00:06.964-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T14:00:06.968-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T14:00:06.969-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T14:00:06.975-03:00 DEBUG 17392 --- [http-nio-8080-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        animal
+        (name, race, type, id) 
+    values
+        (?, ?, ?, default)
+2024-12-09T14:00:08.092-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T14:00:08.092-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T14:00:08.100-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T14:00:08.102-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T14:00:08.104-03:00 DEBUG 17392 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0
+2024-12-09T14:00:08.111-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T14:00:08.111-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T14:00:08.115-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        p1_0.id,
+        p1_0.dtype,
+        p1_0.cpf,
+        p1_0.created_at,
+        p1_0.email,
+        p1_0.name,
+        p1_0.password,
+        p1_0.animal_id 
+    from
+        person p1_0 
+    where
+        p1_0.email=?
+2024-12-09T14:00:08.115-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        pt1_0.person_id,
+        pt1_0.person_type 
+    from
+        perfis pt1_0 
+    where
+        pt1_0.person_id=?
+2024-12-09T14:00:08.115-03:00 DEBUG 17392 --- [http-nio-8080-exec-7] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.name,
+        a1_0.race,
+        a1_0.type 
+    from
+        animal a1_0
+2024-12-09T14:00:14.795-03:00  INFO 17392 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09T14:00:14.800-03:00 DEBUG 17392 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists animal cascade 
+2024-12-09T14:00:14.804-03:00 DEBUG 17392 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists perfis cascade 
+2024-12-09T14:00:14.809-03:00 DEBUG 17392 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists person cascade 
+2024-12-09T14:00:14.819-03:00 DEBUG 17392 --- [SpringApplicationShutdownHook] org.hibernate.SQL                        : 
+    drop table if exists service cascade 
+2024-12-09T14:00:14.824-03:00 TRACE 17392 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryClosed from [org.hibernate.internal.SessionFactoryImpl@4ae98552] for TypeConfiguration
+2024-12-09T14:00:14.824-03:00 DEBUG 17392 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@5c16db34] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@4ae98552]
+2024-12-09T14:00:14.835-03:00  WARN 17392 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-12-09T14:00:14.835-03:00  INFO 17392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-09T14:00:14.835-03:00  INFO 17392 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
