@@ -28,7 +28,6 @@ public class EmployeeDTO {
 
     @Column(unique = true)
     @NotNull(message = "O campo CPF não pode ser nulo")
-    @CPF
     protected String cpf;
 
     @NotNull(message = "O campo sobrenome não pode ser nulo")

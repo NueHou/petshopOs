@@ -24,7 +24,6 @@ async function fetchService() {
             .map(
                 service => `
                     <tr>
-                        <td>${service.id}</td>
                         <td>${service.fullPrice}</td>
                         <td>${service.description}</td>
                         <td>${service.serviceType}</td>

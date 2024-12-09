@@ -43,8 +43,8 @@ public class AnimalResource {
 
     @PreAuthorize("hasRole('EMPLOYEE')")
     @PostMapping
-    public ResponseEntity<AnimalDTO> create(@Valid @RequestBody AnimalDTO objDto){
-        Animal newObj = animalService.create(objDto);
+    public ResponseEntity<AnimalDTO> create(@Valid @RequestBody AnimalDTO objDto, Integer id){
+        Animal newObj = animalService.create(objDto, id);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newObj.getId()).toUri();
         return ResponseEntity.created(uri).build();
     }

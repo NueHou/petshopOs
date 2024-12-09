@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Verifica se o usuário está autenticado
     if (!token) {
         alert('Você não está autenticado.');
-        window.location.href = 'login/login.html';
+        window.location.href = 'login.html';
         return;
     }
 

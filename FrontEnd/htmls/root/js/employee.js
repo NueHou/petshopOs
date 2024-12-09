@@ -8,6 +8,9 @@ async function fetchEmployees() {
         window.location.href = 'login.html';
         return;
     }
+    const personTypeMap = {
+        0: 'Empregado'
+    }
     try {
         const response = await fetch('http://localhost:8080/employees', {
             method: 'GET',
@@ -24,11 +27,10 @@ async function fetchEmployees() {
             .map(
                 employee => `
                     <tr>
-                        <td>${employee.id}</td>
                         <td>${employee.name}</td>
                         <td>${employee.cpf}</td>
                         <td>${employee.email}</td>
-                        <td>${employee.personType}</td>
+                        <td>${personTypeMap[employee.personType] || 'Empregado'}</td>
                         <td>
                         <button class="editButton" onclick="editEmployee(${employee.id})">Editar</button>
                         <button class="deleteButton" onclick="deleteEmployee(${employee.id})">Excluir</button>

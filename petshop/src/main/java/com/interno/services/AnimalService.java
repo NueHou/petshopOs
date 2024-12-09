@@ -33,9 +33,8 @@ public class AnimalService {
         return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Nome:"+ name));
     }
 
-    public Animal create(AnimalDTO objDto){
-        objDto.setId(null);
-        ValidaPorName(objDto);
+    public Animal create(AnimalDTO objDto, Integer id){
+        objDto.setId(id);
         Animal newObj = new Animal();
         return animalRepository.save(newObj);
     }

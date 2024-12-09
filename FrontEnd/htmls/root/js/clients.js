@@ -27,8 +27,7 @@ async function fetchClients() {
                         <td>${client.name}</td>
                         <td>${client.cpf}</td>
                         <td>${client.email}</td>
-                        <td>${client.animal.name }</td>
-                        <td>${client.personType}</td>
+                        <td>${client.animal || 'Pet'}</td>
                         <td>
                         <button class="editButton" onclick="editClient(${client.id})">Editar</button>
                         <button class="deleteButton" onclick="deleteClient(${client.id})">Excluir</button>

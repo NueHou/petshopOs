@@ -30,15 +30,13 @@ public class ClientDTO {
 
     @Column(unique = true)
     @NotNull(message = "O campo  não pode ser nulo")
-    @CPF
     protected String cpf;
 
     @NotNull(message = "O campo  não pode ser nulo")
     @NotBlank(message = "O campo  não pode ser vazio")
     protected String email;
 
-    @NotNull(message = "O campo  não pode ser nulo")
-    @NotBlank(message = "O campo  não pode ser vazio")
+
     protected Animal animal;
 
     @JsonFormat(pattern = "dd/MM/yyyy")

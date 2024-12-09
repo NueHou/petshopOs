@@ -1,6 +1,8 @@
 package com.interno.resources;
 
+import com.interno.domains.Client;
 import com.interno.domains.Employee;
+import com.interno.domains.dtos.ClientDTO;
 import com.interno.domains.dtos.EmployeeDTO;
 import com.interno.services.EmployeeService;
 import jakarta.validation.Valid;
@@ -51,13 +53,20 @@ public class EmployeeResource {
     @PreAuthorize("hasRole('EMPLOYEE') ")
     @PostMapping
     public ResponseEntity<EmployeeDTO> create(@Valid @RequestBody EmployeeDTO objDto, Integer id){
-        Employee newObj = employeeService.create(id, objDto);
+        Employee newObj = employeeService.create(objDto, id);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newObj.getId()).toUri();
         return ResponseEntity.created(uri).build();
     }
 
     @PreAuthorize("hasRole('EMPLOYEE') ")
-    @DeleteMapping
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<EmployeeDTO> update(@PathVariable Integer id, @Valid @RequestBody EmployeeDTO objDto){
+        Employee Obj = employeeService.update(id, objDto);
+        return ResponseEntity.ok().body(new EmployeeDTO(Obj));
+    }
+
+    @PreAuthorize("hasRole('EMPLOYEE') ")
+    @DeleteMapping(value = "/{id}")
     public ResponseEntity<EmployeeDTO> delete(@PathVariable Integer id){
         employeeService.delete(id);
         return ResponseEntity.noContent().build();

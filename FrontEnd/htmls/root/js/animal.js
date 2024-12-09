@@ -24,7 +24,6 @@ async function fetchAnimals() {
             .map(
                 animal => `
                     <tr>
-                        <td>${animal.id}</td>
                         <td>${animal.name}</td>
                         <td>${animal.type}</td>
                         <td>${animal.race}</td>

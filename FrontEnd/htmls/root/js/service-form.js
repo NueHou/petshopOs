@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
     }
 
+    const serviceTypeMap = {
+        'BATH' : 0,
+        'GROOM': 1,
+        'APPOINTMENT': 2
+    }
+
     // Carrega os dados do cliente se estiver em modo de edição
     if (serviceId) {
         try {
@@ -30,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             // Popula os campos do formulário
             document.getElementById('fullPrice').value = service.fullPrice || '';
-            document.getElementById('serviceType').value = service.serviceType || 'BATH', 'GROOM', 'APPOINTMENT';
+            document.getElementById('serviceType').value = service.serviceType || '';
             document.getElementById('description').value = service.description || '';
             document.getElementById('client').value = service.client.id || '';
             document.getElementById('employee').value = service.employee.id || '';
@@ -48,8 +54,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             fullPrice: document.getElementById('fullPrice').value,
             serviceType: document.getElementById('serviceType').value,
             description: document.getElementById('description').value,
-            client: document.getElementById('client').value,
-            employee: document.getElementById('employee').value,
+            client: document.getElementById('clientId').value,
+            employee: document.getElementById('employeeId').value,
         };
 
         const url = serviceId

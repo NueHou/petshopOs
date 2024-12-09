@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Verifica se o usuário está autenticado
     if (!token) {
         alert('Você não está autenticado.');
-        window.location.href = 'login/login.html';
+        window.location.href = 'login.html';
         return;
     }
 
@@ -26,14 +26,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 throw new Error('Erro ao carregar os dados do cliente.');
             }
 
-            const employee = await response.json();
+            const employees = await response.json();
 
             // Popula os campos do formulário
-            document.getElementById('name').value = employee.name || '';
-            document.getElementById('cpf').value = employee.cpf || '';
-            document.getElementById('email').value = employee.email || '';
-            document.getElementById('password').value = employee.password || '';
-            document.getElementById('personType').value = employee.personType || 'EMPLOYEE';
+            document.getElementById('name').value = employees.name || '';
+            document.getElementById('cpf').value = employees.cpf || '';
+            document.getElementById('email').value = employees.email || '';
+            document.getElementById('password').value = employees.password || '';
+            document.getElementById('personType').value = employees.personType || '';
         } catch (error) {
             console.error(error.message);
             alert('Erro ao carregar os dados do employee.');
@@ -44,13 +44,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     form.addEventListener('submit', async event => {
         event.preventDefault(); // Impede o envio padrão do formulário
 
-        const employeeData = {
+        const personTypeEnumMap = {
+            0: 'EMPLOYEE'
+        }
+
+        const employeesData = {
+            name: document.getElementById('name').value,
             cpf: document.getElementById('cpf').value,
             password: document.getElementById('password').value,
             email: document.getElementById('email').value,
-            personType: document.getElementById('personType').value,
+            personType: personTypeEnumMap['EMPLOYEE'],
         };
-
+        console.log(employeesData);
         const url = employeesId
             ? `http://localhost:8080/employees/${employeesId}`
             : 'http://localhost:8080/employees';
@@ -64,18 +69,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                     Authorization: token,
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(employeeData),
+                body: JSON.stringify(employeesData),
             });
 
             if (!response.ok) {
-                throw new Error('Erro ao salvar os dados do cliente.');
+                throw new Error('Erro ao salvar os dados do empregado.');
             }
 
-            alert('Cliente salvo com sucesso!');
+            alert('empregado salvo com sucesso!');
             window.location.href = 'employee.html';
         } catch (error) {
             console.error(error.message);
-            alert('Erro ao salvar os dados do cliente.');
+            alert('Erro ao salvar os dados do empregado.');
         }
     });
     function logout() {

@@ -59,7 +59,7 @@ public class ClientResource {
     }
 
     @Operation(summary = "Cria clietne", description = "Cria um novo cliente")
-    @PreAuthorize("hasRole('EMPLOYEE') ")
+    @PreAuthorize("hasRole('ROLE_EMPLOYEE') ")
     @PostMapping
     public ResponseEntity<ClientDTO> create(@Valid @RequestBody ClientDTO objDto, Integer id){
         Client newObj = clientService.create(objDto);

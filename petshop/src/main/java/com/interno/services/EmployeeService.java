@@ -42,7 +42,7 @@ public class EmployeeService {
         return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Email:"+email));
     }
 
-    public Employee create(Integer id, EmployeeDTO objDto){
+    public Employee create(EmployeeDTO objDto, Integer id){
         objDto.setId(id);
         objDto.setPassword(encoder.encode(objDto.getPassword()));
         ValidaPorCPFeEmail(objDto);
