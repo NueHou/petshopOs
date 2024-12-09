@@ -7,21 +7,21 @@ import jakarta.validation.constraints.NotNull;
 public class AnimalDTO {
 
 
-    protected Integer id;
+    private Integer id;
 
     @NotNull(message = "O campo  não pode ser nulo")
     @NotBlank(message = "O campo  não pode ser vazio")
-    protected String name;
+    private String name;
 
 
 
     @NotNull(message = "O campo  não pode ser nulo")
     @NotBlank(message = "O campo  não pode ser vazio")
-    protected String race;
+    private String race;
 
     @NotNull(message = "O campo  não pode ser nulo")
     @NotBlank(message = "O campo  não pode ser vazio")
-    protected String type;
+    private String type;
 
     public AnimalDTO() {
     }

@@ -24,10 +24,11 @@ async function fetchClients() {
             .map(
                 client => `
                     <tr>
+                        
                         <td>${client.name}</td>
                         <td>${client.cpf}</td>
                         <td>${client.email}</td>
-                        <td>${client.animal || 'Pet'}</td>
+                        <td>${client.animal.name}</td>
                         <td>
                         <button class="editButton" onclick="editClient(${client.id})">Editar</button>
                         <button class="deleteButton" onclick="deleteClient(${client.id})">Excluir</button>

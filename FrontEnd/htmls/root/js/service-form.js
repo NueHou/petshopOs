@@ -4,20 +4,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     const serviceId = localStorage.getItem('editServiceId');
     const form = document.getElementById('serviceForm');
 
-    // Verifica se o usuário está autenticado
     if (!token) {
         alert('Você não está autenticado.');
-        window.location.href = 'login/login.html';
+        window.location.href = 'login.html';
         return;
     }
 
     const serviceTypeMap = {
-        'BATH' : 0,
-        'GROOM': 1,
-        'APPOINTMENT': 2
-    }
+        0: 'BATH',
+        1: 'GROOM',
+        2: 'APPOINTMENT',
+    };
 
-    // Carrega os dados do cliente se estiver em modo de edição
+    // Função para carregar a lista de clientes
+    
+
+    // Carrega os dados do serviço se estiver em modo de edição
     if (serviceId) {
         try {
             const response = await fetch(`http://localhost:8080/service/${serviceId}`, {
@@ -29,35 +31,36 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             if (!response.ok) {
-                throw new Error('Erro ao carregar os dados do service.');
+                throw new Error('Erro ao carregar os dados do serviço.');
             }
 
             const service = await response.json();
-
-            // Popula os campos do formulário
             document.getElementById('fullPrice').value = service.fullPrice || '';
             document.getElementById('serviceType').value = service.serviceType || '';
             document.getElementById('description').value = service.description || '';
-            document.getElementById('client').value = service.client.id || '';
-            document.getElementById('employee').value = service.employee.id || '';
+            document.getElementById('client').value = service.client?.id || '';
+            document.getElementById('employee').value = service.employee?.id || '';
         } catch (error) {
             console.error(error.message);
             alert('Erro ao carregar os dados do serviço.');
         }
     }
 
-    // Manipula o envio do formulário
+    // Carrega listas de clientes e funcionários
+    await loadClients();
+    await loadEmployees();
+
     form.addEventListener('submit', async event => {
-        event.preventDefault(); // Impede o envio padrão do formulário
+        event.preventDefault();
 
         const serviceData = {
-            fullPrice: document.getElementById('fullPrice').value,
+            fullPrice: (document.getElementById('fullPrice').value),
             serviceType: document.getElementById('serviceType').value,
             description: document.getElementById('description').value,
-            client: document.getElementById('clientId').value,
-            employee: document.getElementById('employeeId').value,
+            client: document.getElementById('client').value,
+            employee: document.getElementById('employee').value,
         };
-
+        console.log(serviceData);
         const url = serviceId
             ? `http://localhost:8080/service/${serviceId}`
             : 'http://localhost:8080/service';
@@ -75,18 +78,72 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             if (!response.ok) {
-                throw new Error('Erro ao salvar os dados do cliente.');
+                throw new Error('Erro ao salvar os dados do serviço.');
             }
 
-            alert('animal salvo com sucesso!');
+            alert('Serviço salvo com sucesso!');
             window.location.href = 'service.html';
         } catch (error) {
             console.error(error.message);
-            alert('Erro ao salvar os dados do animal.');
+            alert('Erro ao salvar os dados do serviço.');
         }
     });
+    async function loadClients() {
+        try {
+            const response = await fetch('http://localhost:8080/clients', {
+                method: 'GET',
+                headers: {
+                    Authorization: token,
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro ao carregar clientes.');
+            }
+
+            const clients = await response.json();
+            const clientSelect = document.getElementById('client');
+            clients.forEach(client => {
+                const option = document.createElement('option');
+                option.value = client.id;
+                option.textContent = `${client.name} (CPF: ${client.cpf})`;
+                clientSelect.appendChild(option);
+            });
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
+
+    // Função para carregar a lista de funcionários
+    async function loadEmployees() {
+        try {
+            const response = await fetch('http://localhost:8080/employees', {
+                method: 'GET',
+                headers: {
+                    Authorization: token,
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro ao carregar funcionários.');
+            }
+
+            const employees = await response.json();
+            const employeeSelect = document.getElementById('employee');
+            employees.forEach(employee => {
+                const option = document.createElement('option');
+                option.value = employee.id;
+                option.textContent = `${employee.name} (Email: ${employee.email})`;
+                employeeSelect.appendChild(option);
+            });
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
     function logout() {
-        localStorage.removeItem('jwtToken'); // Remove o token armazenado
+        localStorage.removeItem('jwtToken');
         alert('Logout realizado com sucesso.');
         window.location.href = 'login.html';
     }

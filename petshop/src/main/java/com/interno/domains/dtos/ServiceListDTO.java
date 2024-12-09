@@ -14,7 +14,6 @@ public class ServiceListDTO {
     private Integer id;
 
     @NotNull(message = "O campo  não pode ser nulo")
-    @NotBlank(message = "O campo  não pode ser vazio")
     private Double fullPrice;
     @NotNull(message = "O campo  não pode ser nulo")
     @NotBlank(message = "O campo  não pode ser vazio")

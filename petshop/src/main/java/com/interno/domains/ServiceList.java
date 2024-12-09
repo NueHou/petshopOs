@@ -13,6 +13,7 @@ import java.util.Objects;
 public class ServiceList {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private Double fullPrice;
     private String description;
@@ -20,17 +21,19 @@ public class ServiceList {
 
     private ServiceType serviceType;
 
-    @ManyToOne
-    @JoinColumn(name = "idemployee")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @CollectionTable(name = "employees")
     private Employee employee;
-    @ManyToOne
-    @JoinColumn(name = "idclient")
+    @ManyToOne(fetch = FetchType.EAGER)
+    @CollectionTable(name = "clients")
     private Client client;
 
 
     public ServiceList() {
 
     }
+
+
 
     public ServiceList(Integer id, Client client, Employee employee, String description, Double fullPrice, ServiceType serviceType) {
         this.id = id;

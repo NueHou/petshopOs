@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         event.preventDefault(); // Impede o envio padrão do formulário
 
         const personTypeEnumMap = {
-            0: 'EMPLOYEE'
+            "EMPLOYEE": 0 
         }
 
         const employeesData = {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             cpf: document.getElementById('cpf').value,
             password: document.getElementById('password').value,
             email: document.getElementById('email').value,
-            personType: personTypeEnumMap['EMPLOYEE'],
+            personType: personTypeEnumMap[0],
         };
         console.log(employeesData);
         const url = employeesId

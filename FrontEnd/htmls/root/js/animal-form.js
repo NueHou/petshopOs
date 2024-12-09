@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             if (!response.ok) {
-                throw new Error('Erro ao salvar os dados do cliente.');
+                throw new Error('Erro ao salvar os dados do animal.');
             }
 
             alert('animal salvo com sucesso!');

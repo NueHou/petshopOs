@@ -35,8 +35,8 @@ public class ServiceResource {
 
     @PreAuthorize("hasRole('EMPLOYEE') or hasRole('CLIENT')")
     @PostMapping
-    public ResponseEntity<ServiceListDTO> create(@Valid @RequestBody ServiceListDTO objDto){
-        ServiceList newObj = serviceListService.create(objDto);
+    public ResponseEntity<ServiceListDTO> create(@Valid @RequestBody ServiceListDTO objDto, Integer id){
+        ServiceList newObj = serviceListService.create(objDto, id);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(newObj.getId()).toUri();
         return ResponseEntity.created(uri).build();
     }

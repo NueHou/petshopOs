@@ -26,8 +26,8 @@ public class ServiceListService {
         return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! Id:"+id));
     }
 
-    public ServiceList create(ServiceListDTO objDto){
-        objDto.setId(null);
+    public ServiceList create(ServiceListDTO objDto, Integer id){
+        objDto.setId(id);
         ServiceList newObj = new ServiceList();
         return serviceListRepository.save(newObj);
     }

@@ -40,9 +40,61 @@ async function fetchService() {
     } catch (error) {
         console.error(error.message);
     }
-    
+}
+async function loadClients() {
+    try {
+        const response = await fetch('http://localhost:8080/clients', {
+            method: 'GET',
+            headers: {
+                Authorization: token,
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro ao carregar clientes.');
+        }
+
+        const clients = await response.json();
+        const clientSelect = document.getElementById('client');
+        clients.forEach(client => {
+            const option = document.createElement('option');
+            option.value = client.id;
+            option.textContent = `${client.name} (CPF: ${client.cpf})`;
+            clientSelect.appendChild(option);
+        });
+    } catch (error) {
+        console.error(error.message);
+    }
 }
 
+// Função para carregar a lista de funcionários
+async function loadEmployees() {
+    try {
+        const response = await fetch('http://localhost:8080/employees', {
+            method: 'GET',
+            headers: {
+                Authorization: token,
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro ao carregar funcionários.');
+        }
+
+        const employees = await response.json();
+        const employeeSelect = document.getElementById('employee');
+        employees.forEach(employee => {
+            const option = document.createElement('option');
+            option.value = employee.id;
+            option.textContent = `${employee.name} (Email: ${employee.email})`;
+            employeeSelect.appendChild(option);
+        });
+    } catch (error) {
+        console.error(error.message);
+    }
+}
 // Função para deletar cliente
 async function deleteService(serviceId) {
     const token = localStorage.getItem('jwtToken');

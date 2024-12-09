@@ -16,28 +16,32 @@
     </header>
     <main>
         <form id="serviceForm">
-            
-
-            <label for="fullPrice">Valor Total</label>
-            <input type="text" id="fullPrice" required>
-
-            <label for="descripttion">Descrição:</label>
-            <input type="text" id="description" required>
-
-            <label for="type">Tipo:</label>
-            <select id="serviceType">
-                <option value="BATH">BATH</option>
-                <option value="GROOM">GROOM</option>
-                <option value="APPOINTMENT">APPOINTMENT</option>
+            <label for="fullPrice">Preço:</label>
+            <input type="double" id="fullPrice" name="fullPrice" required />
+        
+            <label for="serviceType">Tipo de Serviço:</label>
+            <select id="serviceType" name="serviceType" required>
+                <option value="BATH">Banho</option>
+                <option value="GROOM">Tosa</option>
+                <option value="APPOINTMENT">Consulta</option>
             </select>
-            <label for="idClient">Id Cliente:</label>
-            <input type="text" id="idClient" required>
-
-            <label for="idEmployee">Id Funcionario:</label>
-            <input type="text" id="idEmployee" required>
-
+        
+            <label for="description">Descrição:</label>
+            <textarea id="description" name="description"></textarea>
+        
+            <label for="client">Cliente:</label>
+            <select id="client" name="client" required>
+                <option value="">Selecione um cliente</option>
+            </select>
+        
+            <label for="employee">Funcionário:</label>
+            <select id="employee" name="employee" required>
+                <option value="">Selecione um funcionário</option>
+            </select>
+        
             <button type="submit">Salvar</button>
         </form>
+        
     </main>
     <script src="js/service-form.js"></script>
 </body>
